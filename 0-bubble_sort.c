@@ -1,17 +1,23 @@
+/*
+ * File: 0-bubble_sort.c
+ * Auth: Gabriel Morffe, Agustin Rodriguez
+ */
+
 #include "sort.h"
+
 /**
- * bubble_sort - Entry point
- * @array: int
- * @size: size_t
- *
- * Return: Always 0
+ * bubble_sort - function that sorts an array of integers in ascending
+ *                  order using the Bubble sort algorithm
+ * @array: array of numbers.
+ * @size: size of array.
+ * Return: Always 0 (Success)
  */
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
 	int aux;
 
-	if (array == NULL)
+	if (!array || !size)
 		return;
 
 	for (i = 0; i < size; i++)
