@@ -27,7 +27,7 @@ void swap_quick_sort(int *array, size_t start, size_t end, size_t size)
 	{
 		if (array[i] < pivot)
 		{
-			if (i != j)
+			if (array[i] != array[j])
 			{
 				temp = array[i];
 				array[i] = array[j];
@@ -38,7 +38,7 @@ void swap_quick_sort(int *array, size_t start, size_t end, size_t size)
 		}
 	}
 
-	if (i != j)
+	if (array[i] != array[j])
 	{
 		temp = array[j];
 		array[j] = array[i];
